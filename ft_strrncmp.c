@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strrncmp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jiyoulee <jiyoulee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,25 +12,19 @@
 
 #include "utils.h"
 
-char	*ft_strstr(char *str, char *to_find)
+int	ft_strrncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*s;
-	char	*f;
+	size_t	i;
+	size_t	j;
 
-	if (*to_find == '\0')
-		return (str);
-	while (*str != '\0')
+	if (!s1 || !s2)
+		return (0);
+	i = ft_strlen(s1) - 1;
+	j = ft_strlen(s2) - 1;
+	while (--n && i && j && s1[i] == s2[j])
 	{
-		s = str;
-		f = to_find;
-		while (*f != '\0' && *s == *f)
-		{
-			++s;
-			++f;
-		}
-		if (*f == '\0')
-			return (str);
-		++str;
+		i--;
+		j--;
 	}
-	return (0);
+	return ((unsigned char)s1[i] - (unsigned char)s2[j]);
 }
