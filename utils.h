@@ -33,6 +33,6 @@ char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *str, int n);
 char	*ft_strdup(const char *str);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strstr(char *str, char *to_find);
+int		ft_strrncmp(const char *s1, const char *s2, size_t n);
 
 #endif
