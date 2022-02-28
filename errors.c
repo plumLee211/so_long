@@ -93,7 +93,7 @@ char	**check_argument(int argc, char **argv, t_game *info)
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
 		print_error("File does not exist!");
-	if (!ft_strstr(argv[1], ".ber"))
+	if (ft_strrncmp(argv[1], ".ber", 4))
 		print_error("Invalid file type!");
 	return (check_error(fd, info));
 }
