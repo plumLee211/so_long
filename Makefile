@@ -12,7 +12,7 @@
 
 NAME	=	so_long
 
-SRCS	=	animations.c draw.c errors.c exit.c ft_itoa.c ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlen.c ft_strstr.c game.c get_next_line.c get_next_line_utils.c map.c player.c render.c so_long.c \
+SRCS	=	animations.c draw.c errors.c exit.c ft_itoa.c ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlen.c ft_strrncmp.c game.c get_next_line.c get_next_line_utils.c map.c player.c render.c so_long.c \
 
 OBJS	=	$(SRCS:%.c=%.o)
 
